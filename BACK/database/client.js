@@ -1,11 +1,13 @@
 const mysql = require('mysql2');
+require('dotenv').config();
 
 // Crear pool de conexiones
 const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'dictionary_db',
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE,
+  port: process.env.PORT,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0

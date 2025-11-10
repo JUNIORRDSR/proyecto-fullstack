@@ -21,3 +21,6 @@ DESCRIBE words;
 
 -- Mostrar mensaje de éxito
 SELECT 'Base de datos y tabla creadas exitosamente' AS mensaje;
+
+
+select * from words limit 10;
