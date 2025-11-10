@@ -1,0 +1,46 @@
+.contenedor-cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.contenedor-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contenedor-card h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.swap-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 35px;
+}
+
+.swap-icon:hover {
+  background-color: #f5f5f5;
+  border-color: #4a90e2;
+}
+
+.swap-icon svg {
+  width: 20px;
+  height: 20px;
+  color: #666;
+}
+

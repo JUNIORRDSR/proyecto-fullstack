@@ -1,0 +1,60 @@
+.card-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.card-textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 16px;
+  font-size: 15px;
+  font-family: inherit;
+  line-height: 1.6;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  resize: vertical;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.card-textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.card-textarea::placeholder {
+  color: #999;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding: 0 4px;
+}
+
+.card-counter {
+  font-size: 12px;
+  color: #999;
+}
+
+.card-copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.card-copy-btn:hover {
+  color: #4a90e2;
+}
+
+.card-copy-btn svg {
+  width: 18px;
+  height: 18px;
+}
