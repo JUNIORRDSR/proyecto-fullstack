@@ -1,6 +1,6 @@
 import './boton.css';
 
-const Boton = ({texto="Enviar", tipo="primary"})=>{
+const Boton = ({texto="Enviar", tipo="primary", onClick, disabled=false})=>{
 
     const iconTranslate = (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -17,7 +17,11 @@ const Boton = ({texto="Enviar", tipo="primary"})=>{
     );
 
     return (
-        <button className={`boton boton-${tipo}`}>
+        <button 
+            className={`boton boton-${tipo}`} 
+            onClick={onClick}
+            disabled={disabled}
+        >
             {tipo === "primary" && iconTranslate}
             {tipo === "secondary" && iconClear}
             {texto}

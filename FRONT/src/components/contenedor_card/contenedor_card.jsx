@@ -1,13 +1,18 @@
 import Card from "../card/card.jsx";
 import "./contenedor_card.css"
 
-const ContenedorCard = ({ español = true }) => {
+const ContenedorCard = ({ español = true, textoOrigen, setTextoOrigen, textoTraducido, setTextoTraducido }) => {
 
     return (
         <div className="contenedor-cards-wrapper">
             <div className="contenedor-card">
                 <h2>{español ? "Spanish" : "Español"}</h2>
-                <Card español={español} />
+                <Card 
+                    español={español} 
+                    text={textoOrigen}
+                    setText={setTextoOrigen}
+                    readOnly={false}
+                />
             </div>
             
             <div className="swap-icon">
@@ -21,7 +26,12 @@ const ContenedorCard = ({ español = true }) => {
             
             <div className="contenedor-card">
                 <h2>{español ? "English" : "Inglés"}</h2>
-                <Card español={!español} />
+                <Card 
+                    español={!español} 
+                    text={textoTraducido}
+                    setText={setTextoTraducido}
+                    readOnly={true}
+                />
             </div>
         </div>
     )
