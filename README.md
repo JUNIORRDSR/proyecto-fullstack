@@ -805,15 +805,15 @@ QuickTranslate demuestra:
 # Capturas
 
 Vista principal de la aplicación
-![alt text](image.png)
+![!\[alt text\](image.png)](img/image.png)
 ---
 
 Traduciendo "carro" a "car"
-![alt text](image-1.png)
+![!\[alt text\](image-1.png)](img/image-1.png)
 ---
 
 Traduciendo "plane" a "avión"
-![alt text](image-2.png)
+![!\[alt text\](image-2.png)](img/image-2.png)
 # Autor
 ## JORGE JUNIOR SOLANO ROMERO
 **Proyecto desarrollado para aprendizaje de desarrollo full-stack**
