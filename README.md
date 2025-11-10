@@ -20,6 +20,18 @@
 
 **QuickTranslate** es una aplicación web full-stack que permite traducir texto entre español e inglés de forma bidireccional. 
 
+### Ejecutar la aplicación con npm
+
+```bash
+npm run start
+```
+
+### Detener la aplicación con npm
+
+```bash
+npm run stop
+```
+
 ### Tecnologías Utilizadas
 
 **Backend:**
