@@ -8,6 +8,7 @@ const ContenedorTraduccion = ({ español = true }) => {
     const [textoOrigen, setTextoOrigen] = useState('');
     const [textoTraducido, setTextoTraducido] = useState('');
     const [cargando, setCargando] = useState(false);
+    const [direccion, setDireccion] = useState('es-en'); // 'es-en' o 'en-es'
 
     const handleTraducir = async () => {
         console.log('=== INICIANDO TRADUCCIÓN ===');
@@ -20,11 +21,10 @@ const ContenedorTraduccion = ({ español = true }) => {
         
         setCargando(true);
         try {
-            const direction = español ? 'es-en' : 'en-es';
-            console.log('Dirección de traducción:', direction);
+            console.log('Dirección de traducción:', direccion);
             console.log('Llamando a la API...');
             
-            const resultado = await traducirTexto(textoOrigen, direction);
+            const resultado = await traducirTexto(textoOrigen, direccion);
             
             console.log('✅ Respuesta recibida:', resultado);
             const traduccion = resultado.translatedWord || resultado.traduccion || resultado.translation || '';
@@ -46,6 +46,15 @@ const ContenedorTraduccion = ({ español = true }) => {
         setTextoTraducido('');
     };
 
+    const handleSwap = () => {
+        // Intercambiar la dirección
+        setDireccion(direccion === 'es-en' ? 'en-es' : 'es-en');
+        // Intercambiar los textos
+        setTextoOrigen(textoTraducido);
+        setTextoTraducido(textoOrigen);
+        console.log('🔄 Idiomas intercambiados:', direccion === 'es-en' ? 'en-es' : 'es-en');
+    };
+
     return (
         <div className="contenedor-traduccion">
             <ContenedorCard 
@@ -54,6 +63,8 @@ const ContenedorTraduccion = ({ español = true }) => {
                 setTextoOrigen={setTextoOrigen}
                 textoTraducido={textoTraducido}
                 setTextoTraducido={setTextoTraducido}
+                direccion={direccion}
+                onSwap={handleSwap}
             />
             <ContenedorBoton 
                 español={español} 
